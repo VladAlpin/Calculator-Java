@@ -1,7 +1,8 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class Main {
-
     public static void main(String[] args) {
         // запускает программу и считавает введеные значения в консоль
         Scanner scanner = new Scanner(System.in);
@@ -17,12 +18,26 @@ public class Main {
         // просто так плюс или умножить не передать, перед ним нужно поставить два слеша
         String[] regexActions = {" \\+ ", " - ", " / ", " \\* "};
 
-        // перечесляет знаки
         int actionIndex = 0;
         for (int i = 0; i < actions.length; i++) {
+            // проверияет введеный символ на его наличие в массиве
             if (input.contains(actions[i])) {
                 actionIndex = i;
                 break;
+            }
+        }
+        // исключения которые нельза вводить, можно добавить другие варианты
+        if(input.contains("IIII") || input.contains("VIIII") || input.contains("IIIIV")
+                || input.contains("IIIV") || input.contains("IIV") || input.contains("XIIII") || input.contains("IIIIX")
+                || input.contains("IIIX") || input.contains("IIX") || input.contains("XVII") || input.contains("IIVX")
+                || input.contains("IIIVX") || input.contains("XVIIII") || input.contains("IIIIVX") || input.contains("XXIIII")
+                || input.contains("IIIIXX") || input.contains("VV") || input.contains("XVVIIII") || input.contains("XVV")
+                || input.contains("IIIIXX") || input.contains("VVX") || input.contains("IIIIVVX") || input.contains("IIIVVX")
+        ) {
+            try {
+                throw new Exception("т.к. нет таких чисел");
+            } catch (Exception e) {
+                throw new RuntimeException(e);
             }
         }
         //создает массив всех чисел и разбивает строку на части с помощью split, знаки +-*/ кладет в массив
@@ -64,6 +79,7 @@ public class Main {
                     throw new RuntimeException(e);
                 }
             }
+
 
             //выполняет арифметическое действие через switch case
             switch (actions[actionIndex]) {

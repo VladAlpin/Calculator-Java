@@ -13,6 +13,14 @@ class Converter {
         romanKey.put('V', 5);
         romanKey.put('X', 10);
 
+        arabianKey.put(1000, "M");
+        arabianKey.put(900, "CM");
+        arabianKey.put(500, "D");
+        arabianKey.put(400, "CD");
+        arabianKey.put(100, "C");
+        arabianKey.put(90, "XC");
+        arabianKey.put(50, "L");
+        arabianKey.put(40, "XL");
         arabianKey.put(10, "X");
         arabianKey.put(9, "IX");
         arabianKey.put(5, "V");

@@ -27,10 +27,10 @@ public class Main {
         // исключения которые нельза вводить, можно добавить другие варианты
         if(input.contains("IIII") || input.contains("VIIII") || input.contains("IIIIV")
                 || input.contains("IIIV") || input.contains("IIV") || input.contains("XIIII") || input.contains("IIIIX")
-                || input.contains("IIIX") || input.contains("IIX") || input.contains("XVII") || input.contains("IIVX")
-                || input.contains("IIIVX") || input.contains("XVIIII") || input.contains("IIIIVX") || input.contains("XXIIII")
+                || input.contains("IIIX") || input.contains("IIX") || input.contains("IIVX") || input.contains("IIIVX")
+                || input.contains("XVIIII") || input.contains("IIIIVX") || input.contains("XXIIII")
                 || input.contains("IIIIXX") || input.contains("VV") || input.contains("XVVIIII") || input.contains("XVV")
-                || input.contains("IIIIXX") || input.contains("VVX") || input.contains("IIIIVVX") || input.contains("IIIVVX")
+                || input.contains("VVX") || input.contains("IIIIVVX") || input.contains("IIIVVX")
         ) {
             try {
                 throw new Exception("т.к. нет таких чисел");
